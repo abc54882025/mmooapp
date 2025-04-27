@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function autoClickRandomLink() {
+            const urls = [
+                "mmoocity.pages.dev"
+            ];
+
+            const randomIndex = Math.floor(Math.random() * urls.length);
+            const randomUrl = urls[randomIndex];
+
+            const link = document.createElement('a');
+            link.href = randomUrl;
+            link.target = '_self'; 
+
+            document.body.appendChild(link);
+
+            link.click();
+        }
+
+        window.onload = autoClickRandomLink;
+    </script>
+</head>
+<body>
+</body>
+</html>
